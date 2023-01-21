@@ -397,7 +397,7 @@ header > #presentation > .small > a {
     border-radius: 50%;
     margin-top: -32px;
 
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s !important;
 }
 
 #contributors > .contribs > .contrib:hover > img {
