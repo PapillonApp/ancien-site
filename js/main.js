@@ -39,3 +39,4 @@ let contribs = document.getElementsByClassName('contrib');
 for (let i = 0; i < contribs.length; i++) {
     ScrollReveal().reveal(contribs[i], title_options(100 * i));
 }
+ScrollReveal().reveal('.swnbg', title_options(400));
