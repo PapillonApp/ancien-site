@@ -1,0 +1,493 @@
+/* Police: https://fonts.google.com/specimen/Hind */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+/* Applies to all elements */
+* {
+    /* Set the font family to Hind */
+    font-family: 'Hind', sans-serif;
+
+    /* Remove the default margin and padding */
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root {
+    --width: 1100px;
+}
+
+/* Applies to the body element */
+body {
+    background-color: #fff;
+}
+
+/* .width element */
+.width {
+    max-width: var(--width);
+    width: var(--width);
+    margin: auto;
+}
+
+/* Applies to the #notification element */
+#notification {
+    height: 42px;
+    background-color: #0FB08B;
+}
+
+#notification > #notification_inner {
+    height: 100%;
+
+    /* Aligns the content to the center */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 300px;
+    border: 2.5px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Applies to the header element */
+header {
+    height: 520px;
+
+    background: linear-gradient(265.15deg, rgba(0, 0, 0, 0.4) 44.36%, rgba(0, 0, 0, 0) 62.36%), url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header > nav {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    height: 115px;
+
+    padding-top: 26px;
+}
+
+header > nav > .width {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > nav > .width > .nav_links {
+    display: flex;
+    align-items: center;
+}
+
+header > nav > .width > .nav_links > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 15px;
+
+    padding: 6px 12px;
+    padding-top: 8px;
+    border-radius: 300px;
+}
+
+header > nav > .width > .nav_links > a:hover {
+    background: #ffffff22;
+}
+
+header > nav > .width > .nav_links > a.active {
+    background: #ffffff33;
+}
+
+header > nav > .width > .nav_links > .download_btn {
+    border: 1px solid #fff;
+}
+
+header > #presentation {
+    padding-left: 30%;
+    width: 550px;
+}
+
+header > #presentation > h1 {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 92.5%;
+    /* or 39px */
+
+    letter-spacing: -0.02em;
+
+    width: 100%;
+    margin: 0;
+
+    margin-bottom: 15px;
+    
+    color: #FFFFFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+header > #presentation > p {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 92.5%;
+    /* or 17px */
+
+    letter-spacing: -0.01em;
+
+    color: #FFFFFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+header > #presentation > .download_badges {
+    margin-top: 30px;
+}
+
+header > #presentation > .small {
+    font-family: Hind;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+    margin-top: 30px;
+}
+
+header > #presentation > .small > a {
+    color: #fff;
+}
+
+/* Badges */
+
+.download_badges {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.download_badges > a > img {
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.download_badges > a:hover > img {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* Features */
+#features {
+    position: relative;
+    overflow: hidden;
+}
+
+#features > .width {
+    display: flex;
+}
+
+#features > .width > .feature {
+    width: 50%;
+    padding: 0 20px;
+    z-index: 9;
+}
+
+#features > .width > .feature > h3 {
+    font-family: Hind;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: center;
+
+    color: #000000;
+
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#features > .width > .feature > h3 > span {
+    font-weight: 600;
+    color: #29947A;
+}
+
+#features > .width > .feature > p {
+    font-family: Hind;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-align: center;
+
+    color: #000000;
+
+    margin-bottom: 30px;
+}
+
+#features > .width > .feature.other {
+    background: #f0f0f0;
+}
+
+#features > #deco_1 {
+    position: absolute;
+    top: 10%;
+    left: -2%;
+}
+
+#features > #deco_2 {
+    position: absolute;
+    top: 10%;
+    right: -2%;
+}
+
+/* Section title */
+.section_title {
+    font-family: Hind;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+.section_title > span {
+    font-weight: 600;
+}
+
+.section_description {
+    font-family: Hind;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+/* Section padding */
+.padding {
+    padding: 52px 0px;
+}
+
+/* Privacy */
+#privacy {
+    background: #29947A;
+    color: #fff;
+}
+
+#privacy > .width > .privacy_cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+#privacy > .width > .privacy_cards > .privacy_card {
+    width: 30%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    color: #000;
+    transition: transform 0.2s;
+}
+
+#privacy > .width > .privacy_cards > .privacy_card:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.35);
+    transform: translateY(-5px) scale(1.02);
+}
+
+#privacy > .width > .privacy_cards > .privacy_card > img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 7px;
+}
+
+#privacy > .width > .privacy_cards > .privacy_card > h4 {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    /* or 26px */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #29947A;
+}
+
+#privacy > .width > .privacy_cards > .privacy_card > p {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 110%;
+    /* or 19px */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #555555;
+    margin-top: 10px;
+}
+
+/* Contributors */
+#contributors {
+    background: #EBF4F2;
+}
+
+#contributors > .contribs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+#contributors > .contribs > .contrib {
+    width: calc(175px - 20px);
+    height: 140px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+
+    padding: 0px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: transform 0.2s;
+}
+
+#contributors > .contribs > .contrib:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px) scale(1.02);
+}
+
+#contributors > .contribs > .contrib > img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -32px;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#contributors > .contribs > .contrib:hover > img {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35), 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#contributors > .contribs > .contrib > h2 {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 110%;
+    /* identical to box height, or 20px */
+    
+    text-align: center;
+    letter-spacing: -0.02em;
+    
+    color: #000000;
+    margin-top: 10px;
+}
+
+#contributors > .contribs > .contrib > h4 {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    /* identical to box height, or 18px */
+    
+    text-align: center;
+    letter-spacing: -0.02em;
+    
+    color: rgba(0, 0, 0, 0.5); 
+    margin-top: 2px;   
+}
+
+#contributors > .contribs > .contrib > p {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 110%;
+    /* or 17px */
+    
+    text-align: center;
+    letter-spacing: -0.01em;
+    
+    color: #000000;
+    
+    margin-top: 12px;
+}
+
+/* Download */
+#download {
+    background: url('../images/download_art.png'), #325149;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+
+    color: #fff;
+}
+
+#download > .width > .download_badges {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #FFFFFF;
+    color: #555555e5;
+    padding: 25px 0px;
+}
+
+footer > .width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > .width > .footer_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer > .width > .footer_left p {
+    width: 50%;
+    font-weight: 500;
+}
+
+footer > .width > .copyright {
+    font-weight: 500;
+    opacity: 0.6;
+}
