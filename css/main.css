@@ -238,6 +238,10 @@ header > #presentation > .small > a {
     margin-bottom: 30px;
 }
 
+#features > .width > .feature > img {
+    width: 512px;
+}
+
 #features > .width > .feature.other {
     background: #f0f0f0;
 }
