@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Variables */
 :root {
     --width: 1100px;
@@ -490,4 +494,137 @@ footer > .width > .footer_left p {
 footer > .width > .copyright {
     font-weight: 500;
     opacity: 0.6;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1480px) {
+    #contributors > .contribs {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    #contributors > .contribs > .contrib {
+        width: calc(150px - 20px);
+        height: 110px;
+    }
+
+    #contributors > .contribs > .contrib > p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .width {
+        width: calc(100% - 70px);
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #contributors {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contribs {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        width: calc(150px*4 + 20px);
+    }
+
+    .contrib {
+        margin-bottom: 40px;
+    }
+
+    #features > .width {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #features > .width > .feature {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    #download {
+        background: #325149;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        background: linear-gradient(100deg, rgba(0, 0, 0, 0.4) 62%, rgba(0, 0, 0, 0) 88%), url(../images/background.jpg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: cover;
+    }
+
+    #presentation {
+        padding-left: 0px !important;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .contribs {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(150px*2 + 20px);
+    }
+
+    .privacy_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .privacy_card {
+        width: 90% !important;
+    }
+
+    .footer_left p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 584px) {
+    #presentation {
+        width: calc(100% - 70px) !important;
+    }
+
+    #presentation h1 {
+        width: 100% !important;
+    }   
+
+    #presentation p {
+        width: 100% !important;
+    }
+
+    .download_btn {
+        display: none;
+    }
+
+    #presentation .download_badges a img {
+        height: 38px;
+    }
+
+    .copyright {
+        text-align: right;
+    }
+
+    .mobile_out {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        height: 600px;
+    }
 }
