@@ -54,7 +54,7 @@
 
         <header>
             <nav>
-                <div class="width">
+                <div class="width" id="nav_width">
                     <img src="/images/logo.svg" />
                     <div class="nav_links">
                         <a href="https://discord.gg/DMx3TDyz2U">Discord</a>
@@ -65,10 +65,10 @@
             </nav>
 
             <div id="presentation" class="width">
-                <h1>Votre vie scolaire dans une seule application</h1>
-                <p>Votre emploi du temps, votre agenda, vos notes, vos news et bien plus encore en un clin d’œil grâce à la nouvelle app Papillon.</p>
+                <h1 id="main_title">Votre vie scolaire dans une seule application</h1>
+                <p id="main_desc">Votre emploi du temps, votre agenda, vos notes, vos news et bien plus encore en un clin d’œil grâce à la nouvelle app Papillon.</p>
 
-                <div class="download_badges">
+                <div id="main_buttons" class="download_badges">
                     <a href="https://play.google.com/store/apps/details?id=plus.pronote.app">
                         <img src="/images/gplay_badge.svg" />
                     </a>
@@ -77,7 +77,7 @@
                     </a>
                 </div>
 
-                <p class="small">
+                <p class="small" id="main_conditions">
                     En installant l’application mobile Papillon, vous acceptez la <a href="/privacy.pdf">politique de confidentialité</a> de Papillon
                 </p>
             </div>
@@ -86,14 +86,14 @@
         <section id="features">
             <div class="width">
                 <div class="feature">
-                    <h3>Votre <span>emploi du temps</span></h3>
-                    <p>Papillon récupère vos données depuis Pronote, ÉcoleDirecte, ou tout autre service compatible.Votre emploi du temps est ensuite téléchargé et il apparaît directement dans Papillon</p>
-                    <img src="/images/feature_edt.png" />
+                    <h3 class="feature_name">Votre <span>emploi du temps</span></h3>
+                    <p class="feature_desc">Papillon récupère vos données depuis Pronote, ÉcoleDirecte, ou tout autre service compatible.Votre emploi du temps est ensuite téléchargé et il apparaît directement dans Papillon</p>
+                    <img class="feature_img" src="/images/feature_edt.png" />
                 </div>
                 <div class="feature other">
-                    <h3>Et beaucoup <span>plus de fonctionnalités</span></h3>
-                    <p>Papillon vous permet de personnaliser l’interface, d’installer des extensions (bientôt), d’accéder à des données qui sont cachées et bien plus encore... C’est le couteau suisse de votre scolarité !</p>
-                    <img src="/images/feature_other.png" />
+                    <h3 class="feature_name">Et beaucoup <span>plus de fonctionnalités</span></h3>
+                    <p class="feature_desc">Papillon vous permet de personnaliser l’interface, d’installer des extensions (bientôt), d’accéder à des données qui sont cachées et bien plus encore... C’est le couteau suisse de votre scolarité !</p>
+                    <img class="feature_img" src="/images/feature_other.png" />
                 </div>
             </div>
 
@@ -107,19 +107,19 @@
                 <p class="section_description">La confidentialité et la sécurité de vos données est essentielle lorsque cela atteint des informations telles que vos résultats scolaire ou des données personnelles que détiennent votre établissement. C’est pour cela que nous nous engageons à rendre Papillon sûr.</p>
 
                 <div class="privacy_cards">
-                    <div class="privacy_card">
+                    <div class="privacy_card pc1">
                         <img src="/images/privacy_icon_1.svg" />
                         <h4>On ne garde rien</h4>
                         <p>Nos serveurs ne conservent pas vos données et les échanges avec ceux-ci sont chiffrés et sécurisés.</p>
                     </div>
 
-                    <div class="privacy_card">
+                    <div class="privacy_card pc2">
                         <img src="/images/privacy_icon_2.svg" />
                         <h4>Le code est libre</h4>
                         <p>Le code qui fait fonctionner Papillon est disponible à tous sur GitHub. Vous pouvez savoir exactement ce qui se passe.</p>
                     </div>
 
-                    <div class="privacy_card">
+                    <div class="privacy_card pc3">
                         <img src="/images/privacy_icon_3.svg" />
                         <h4>On ne vous espionne pas</h4>
                         <p>Il n’y a ni pubs ni données collectées via l’application mobile Papillon. Votre expérience s’améliore et votre sécurité aussi.</p>
@@ -204,5 +204,8 @@
                 <p class="copyright">© 2022 - 2023 PapillonApp et Applications Logi12</p>
             </div>
         </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
