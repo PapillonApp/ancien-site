@@ -30,13 +30,13 @@ ScrollReveal().reveal('.section_title', title_options(100));
 ScrollReveal().reveal('.section_description', title_options(200));
 
 // privacy
-ScrollReveal().reveal('.pc1', title_options(300));
-ScrollReveal().reveal('.pc2', title_options(350));
-ScrollReveal().reveal('.pc3', title_options(400));
+ScrollReveal().reveal('.pc1', title_options(0));
+ScrollReveal().reveal('.pc2', title_options(50));
+ScrollReveal().reveal('.pc3', title_options(100));
 
 // contribs
 let contribs = document.getElementsByClassName('contrib');
 for (let i = 0; i < contribs.length; i++) {
-    ScrollReveal().reveal(contribs[i], title_options(100 * i));
+    ScrollReveal().reveal(contribs[i], title_options(10 * i));
 }
 ScrollReveal().reveal('.swnbg', title_options(400));
