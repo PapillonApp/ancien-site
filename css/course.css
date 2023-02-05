@@ -32,8 +32,7 @@ body {
 
 #courseCardTop {
     width: calc(100% - 20px * 2);
-    padding: 8px 20px;
-    padding-top: 15px;
+    padding: 12px 20px;
     background-color: green;
     color: #fff;
 }
@@ -66,7 +65,7 @@ body {
 
 #courseData .courseInfo {
     width: calc(100% - 20px);
-    padding: 8px 20px;
+    padding: 12px 20px;
     
     border-bottom: 1px solid #00000030;
 
@@ -83,7 +82,6 @@ body {
     font-weight: 500;
     font-size: 0.9rem;
     opacity: 0.5;
-    margin-top: 4px;
     margin-bottom: 2px;
 }
 
