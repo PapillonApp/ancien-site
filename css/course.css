@@ -1,0 +1,139 @@
+/* Police: https://fonts.google.com/specimen/Hind */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+/* Applies to all elements */
+* {
+    /* Set the font family to Hind */
+    font-family: 'Hind', sans-serif;
+
+    /* Remove the default margin and padding */
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+}
+
+body {
+    background-color: #f0f0f0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+}
+
+#courseCard {
+    width: 300px;
+
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+}
+
+#courseCardTop {
+    width: calc(100% - 20px * 2);
+    padding: 8px 20px;
+    padding-top: 15px;
+    background-color: green;
+    color: #fff;
+}
+
+#courseCardTop h1 {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-weight: 500;
+
+    font-size: 1.7rem;
+
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#courseCardTop .personName {
+    font-weight: 500;
+    opacity: 50%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#courseData {
+    width: 100%;
+}
+
+#courseData .courseInfo {
+    width: calc(100% - 20px);
+    padding: 8px 20px;
+    
+    border-bottom: 1px solid #00000030;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#courseData .courseInfo:hover {
+    background-color: #00000010;
+}
+
+#courseData .courseInfo p {
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+#courseData .courseInfo h3 {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.logo {
+    height: 36px;
+    margin-bottom: 20px;
+    opacity: 0.25;
+}
+
+.bottom {
+    margin-top: 30px;
+    max-width: 80vw;
+    text-align: center;
+    color: #555;
+}
+
+.bottom a {
+    color: #555;
+}
+
+@media screen and (max-width: 600px) {
+    #courseCard {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100vw !important;
+        height: 100vh !important;
+
+        border-radius: 0;
+    }
+
+    .logo {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 99999;
+        filter: invert(1);
+    }
+
+    #courseCardTop {
+        padding-right: 100px !important;
+        width: calc(100% - 100px) !important;
+    }
+}
