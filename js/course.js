@@ -50,7 +50,3 @@ if (course.status.toString() == "null") {
     course.status = 'Le cours se déroule normalement';
 }
 document.getElementById('status').innerHTML = course.status;
-
-// update open graph
-document.getElementById('ogTitle').setAttribute('content', course.subject + ' - ' + "Papillon");
-document.getElementById('ogDescription').setAttribute('content', course.teacher + ' - ' + course.room);
