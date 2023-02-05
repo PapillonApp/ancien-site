@@ -17,6 +17,9 @@ console.log(course);
 // set color
 document.getElementById('courseCardTop').style.backgroundColor = course.color;
 
+// set theme color
+document.querySelector('meta[name=theme-color]').setAttribute('content', course.color);
+
 // set first name
 document.getElementById('person').innerHTML = course.firstName;
 
