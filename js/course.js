@@ -50,3 +50,8 @@ if (course.status.toString() == "null") {
     course.status = 'Le cours se déroule normalement';
 }
 document.getElementById('status').innerHTML = course.status;
+
+// set timeout to remove loading screen
+setTimeout(function () {
+    document.getElementById('loading').style.display = 'none';
+}, 1000);
