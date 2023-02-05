@@ -21,19 +21,19 @@ document.getElementById('courseCardTop').style.backgroundColor = course.color;
 document.querySelector('meta[name=theme-color]').setAttribute('content', course.color);
 
 // set first name
-document.getElementById('person').innerHTML = course.firstName;
+document.getElementById('person').innerText = course.firstName;
 
 // set course name
-document.getElementById('courseName').innerHTML = course.subject;
+document.getElementById('courseName').innerText = course.subject;
 
 // set teacher name
-document.getElementById('teacherName').innerHTML = course.teacher;
+document.getElementById('teacherName').innerText = course.teacher;
 
 // set room name
-document.getElementById('roomName').innerHTML = course.room;
+document.getElementById('roomName').innerText = course.room;
 
 // set start and end time
-document.getElementById('startTime').innerHTML = course.start + ' - ' + course.end;
+document.getElementById('startTime').innerText = course.start + ' - ' + course.end;
 
 // set length of course
 // calculate length of course
@@ -46,13 +46,13 @@ const hours = Math.floor(length / 60);
 const minutes = length % 60;
 const lengthString = hours + ' h ' + minutes + ' min';
 
-document.getElementById('length').innerHTML = lengthString;
+document.getElementById('length').innerText = lengthString;
 
 // set status
 if (course.status.toString() == "null") {
     course.status = 'Le cours se déroule normalement';
 }
-document.getElementById('status').innerHTML = course.status;
+document.getElementById('status').innerText = course.status;
 
 // set timeout to remove loading screen
 setTimeout(function () {
