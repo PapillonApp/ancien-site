@@ -13,6 +13,7 @@ let course = {
     memo: data[8] == 'none' ? null : data[8]
 };
 
+course.firstName = course.firstName.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
 course.subject = course.subject.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
 
 // set color
