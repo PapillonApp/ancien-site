@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const data = atob(urlParams.get('c')).split(',');
+const data = atob(urlParams.get('c')).split('$');
 
 let course = {
     firstName: data[0],
