@@ -9,7 +9,8 @@ let course = {
     start: data[4],
     end: data[5],
     color: data[6],
-    status: data[7]
+    status: data[7],
+    memo: data[8] == 'none' ? null : data[8]
 };
 
 console.log(course);
