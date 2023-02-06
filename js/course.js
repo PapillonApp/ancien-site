@@ -13,7 +13,7 @@ let course = {
     memo: data[8] == 'none' ? null : data[8]
 };
 
-console.log(course);
+course.subject = course.subject.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
 
 // set color
 document.getElementById('courseCardTop').style.backgroundColor = course.color;
@@ -36,6 +36,13 @@ document.getElementById('roomName').innerText = course.room;
 // set start and end time
 document.getElementById('startTime').innerText = course.start + ' - ' + course.end;
 
+// set memo
+if (course.memo != null) {
+    document.getElementById('memo').innerText = course.memo;
+} else {
+    document.getElementById('hasMemo').style.display = 'none';
+}
+
 // set length of course
 // calculate length of course
 const start = course.start.split(':');
@@ -44,15 +51,23 @@ const length = (parseInt(end[0]) - parseInt(start[0])) * 60 + (parseInt(end[1]) 
 
 // make a string in hours and minutes
 const hours = Math.floor(length / 60);
-const minutes = length % 60;
-const lengthString = hours + ' h ' + minutes + ' min';
+const minutes = length % 60 < 10 ? '0' + length % 60 : length % 60;
+let lengthString;
+if (hours == 0) {
+    lengthString = minutes + ' min';
+} else {
+    lengthString = hours + ' h ' + minutes + ' min';
+}
 
 document.getElementById('length').innerText = lengthString;
 
 // set status
+let hasStatus = true;
 if (course.status.toString() == "null") {
     course.status = 'Le cours se déroule normalement';
+    hasStatus = false;
 }
+document.getElementById('hasStatus').style.color = hasStatus ? '#C98E0D' : 'black';
 document.getElementById('status').innerText = course.status;
 
 // set timeout to remove loading screen
