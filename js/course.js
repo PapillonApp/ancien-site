@@ -13,10 +13,10 @@ let course = {
     memo: data[8] == 'none' ? null : data[8]
 };
 
-course.firstName = course.firstName.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
-course.subject = course.subject.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
-course.teacher = course.teacher.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
-course.room = course.room.split(' ').map(Number).map(x => String.fromCharCode(x)).join('');
+course.firstName = course.firstName.split('-').map(Number).map(x => String.fromCharCode(x)).join('');
+course.subject = course.subject.split('-').map(Number).map(x => String.fromCharCode(x)).join('');
+course.teacher = course.teacher.split('-').map(Number).map(x => String.fromCharCode(x)).join('');
+course.room = course.room.split('-').map(Number).map(x => String.fromCharCode(x)).join('');
 
 // set color
 document.getElementById('courseCardTop').style.backgroundColor = course.color;
