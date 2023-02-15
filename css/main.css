@@ -474,3 +474,35 @@ nav.header-scrolled {
         height: 36px !important;
     }
 }
+
+#article_head {
+    background: #34495E;
+    height: 200px;
+
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#article_head .width {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#article_head .width * {
+    margin: 0px;
+}
+
+.article_name {
+    padding: 6px 12px;
+    background: #ffffff10;
+    border-radius: 50px;
+    border: 1px solid #ffffff50;
+    margin-bottom: 15px !important;
+}
+
+article {
+    margin-bottom: 10vh !important;
+}

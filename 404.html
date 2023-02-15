@@ -41,13 +41,32 @@
                 </button></a>
             </div>
         </nav>
+
+        <div id="article_head">
+            <div class="width">
+                <p class="article_name">Page d'erreur</p>
+                <h1 class="article_title">Erreur 404 : Page introuvable</h1>
+                <p class="article_description">La page que vous recherchez n'existe pas ou a été déplacée.</p>
+            </div>
+        </div>
         
         <article class="width">
-            <h1>Erreur 404 : Page introuvable</h1>
+            <div id="content">
 
-            <h3>Cette page est introuvable</h3>
-            <p>La page que vous recherchez n'existe pas ou a été déplacée.</p>
-            <p>Vous pouvez retourner à la page d'accueil en cliquant sur le logo Papillon.</p>
+## Cette page n'existe pas.
+Essayez d'accéder à une autre page ou de revenir à la [page d'accueil](/) de Papillon.
+
+#
+
+![404.png](https://http.cat/404)
+
+            </div>
         </article>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+            let content = document.getElementById('content');
+            content.innerHTML = marked.parse(content.innerHTML);
+        </script>
     </body>
 </html>
