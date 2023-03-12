@@ -11,6 +11,7 @@ if (urlParams.get('c') == null) {
 }
 else {
     try {
+        document.getElementById('error').style.display = 'none';
         const data = atob(urlParams.get('c')).split('$');
 
         let course = {
@@ -93,3 +94,27 @@ else {
         document.getElementById('errorText').innerText = 'Les données n\'apparaissent peut-être pas correctement.';
     }
 }
+
+// reveal
+// for each .courseInfo 
+let i = 0;
+let couseInfos = document.querySelectorAll('.courseInfo');
+
+for (const courseInfo of couseInfos) {
+    ScrollReveal().reveal(courseInfo, {
+        delay: 50 * i,
+        duration: 400,
+        distance: '10px',
+        origin: 'bottom',
+        scale: 0.98
+    });
+    i++;
+}
+
+ScrollReveal().reveal('.bottom', {
+    delay: 500,
+    duration: 400,
+    distance: '10px',
+    origin: 'bottom',
+    scale: 0.98
+});
