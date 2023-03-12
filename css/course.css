@@ -1,10 +1,10 @@
 /* Import Open Sans font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Miriam+Libre:wght@700&display=swap');
 
 /* Applies to all elements */
 * { 
     /* Set the font family to Hind */
-    font-family: "Open Sans", sans-serif;
+    font-family: "Hind", sans-serif;
 
     /* Remove the default margin and padding */
     margin: 0;
@@ -23,10 +23,14 @@ body {
     padding-top: 50px;
 }
 
-#courseCard {
-    width: 300px;
+:root {
+    --main-color: #1e90ff;
+}
 
-    background-color: #fff;
+#courseCard {
+    width: 400px;
+
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -36,21 +40,23 @@ body {
 #courseCardTop {
     width: calc(100% - 20px * 2);
     padding: 12px 20px;
-    background-color: green;
+    background-color: var(--main-color);
     color: #fff;
 }
 
 #courseCardTop h1 {
-    margin-top: 5px;
+    margin-top: 3px;
     margin-bottom: 0;
     font-weight: 600;
 
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    font-family: 'Miriam Libre';
 }
 
 #courseCardTop .personName {
@@ -60,6 +66,8 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    margin-top: 4px;
 }
 
 #courseData {
@@ -67,14 +75,21 @@ body {
 }
 
 #courseData .courseInfo {
-    width: calc(100% - 20px);
+    width: calc(100% - 20px * 2 - 10px * 2);
     padding: 12px 20px;
-    
-    border-bottom: 1px solid #00000030;
 
     display: flex;
     align-items: center;
     gap: 20px;
+
+    background: #fff !important;
+    margin: 10px;
+    border-radius: 5px;
+
+    box-shadow: 
+      0px 1px 2px rgba(0, 0, 0, 0.1),
+      0 0 10px rgba(0, 0, 0, 0.1)
+    ; 
 }
 
 #courseData .courseInfo:hover {
@@ -83,14 +98,17 @@ body {
 
 #courseData .courseInfo p {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.5;
-    margin-bottom: 2px;
+    margin-top: 2px;
 }
 
 #courseData .courseInfo h3 {
     font-weight: 600;
     font-size: 1.1rem;
+    font-family: 'Miriam Libre';
+    margin-top: 2px;
+    margin-bottom: -1px;;
 }
 
 .logo {
@@ -100,14 +118,88 @@ body {
 }
 
 .bottom {
-    margin-top: 30px;
-    max-width: 80vw;
+    margin: 25px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom p {
+    margin: 0px 40px;
     text-align: center;
+    color: #555555c5;
+}
+
+.bottom p a {
     color: #555;
 }
 
-.bottom a {
-    color: #555;
+.store_badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.store_badges .badge img {
+    height: 36px !important;
+}
+
+#error {
+    display: none;
+
+    margin-top: 5px;
+    
+    background: #fff;
+    color: #bc7a00;
+    margin: 10px;
+    border-radius: 5px;
+
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: 
+      0px 1px 2px rgba(0, 0, 0, 0.1),
+      0 0 10px rgba(0, 0, 0, 0.1)
+    ; 
+}
+
+#error span {
+    font-size: 40px;
+}
+
+#error h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Miriam Libre';
+}
+
+#error.small {
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+
+    background: #bc7a0010 !important;
+    border: 1px solid #bc7a00;
+    color: #bc7a00;
+    box-shadow: none;
+}
+
+#error.small h1 { 
+    display: none;
+}
+
+#error.small span {
+    font-size: 24px;
+}
+
+#error.small p { 
+    margin-bottom: -5px;
 }
 
 @media screen and (max-width: 600px) {
@@ -124,7 +216,7 @@ body {
 
     .logo {
         position: fixed;
-        top: 20px;
+        top: 21px;
         right: 20px;
         z-index: 9999;
         filter: invert(1);
@@ -134,102 +226,4 @@ body {
         padding-right: 100px !important;
         width: calc(100% - 100px) !important;
     }
-}
-
-#loading {
-    width: 100vw;
-    height: 100vh;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 99999999;
-
-    background-color: #fff;
-}
-
-.spinner
-{
-  -webkit-animation: rotation 1.35s linear infinite;
-  animation: rotation 1.35s linear infinite;
-}
-
-@-webkit-keyframes rotation
-{
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-}
-
-@keyframes rotation
-{
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-}
-
-.circle
-{
-  stroke-dasharray: 180;
-  stroke-dashoffset: 0;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: turn 1.35s ease-in-out infinite;
-  animation: turn 1.35s ease-in-out infinite;
-}
-
-@-webkit-keyframes turn
-{
-  0% {
-    stroke-dashoffset: 180;
-  }
-
-  50% {
-    stroke-dashoffset: 45;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-
-  100% {
-    stroke-dashoffset: 180;
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg);
-  }
-}
-
-@keyframes turn
-{
-  0% {
-    stroke-dashoffset: 180;
-  }
-
-  50% {
-    stroke-dashoffset: 45;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-
-  100% {
-    stroke-dashoffset: 180;
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg);
-  }
 }
