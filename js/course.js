@@ -96,13 +96,26 @@ else {
 }
 
 // reveal
+ScrollReveal().reveal('#courseCard', {
+    delay: 150,
+    duration: 400,
+    scale: 0.98
+});
+
+ScrollReveal().reveal('.logo', {
+    delay: 300,
+    duration: 300,
+    opacity: 0,
+    scale: 0.8
+});
+
 // for each .courseInfo 
 let i = 0;
 let couseInfos = document.querySelectorAll('.courseInfo');
 
 for (const courseInfo of couseInfos) {
     ScrollReveal().reveal(courseInfo, {
-        delay: 50 * i,
+        delay: 200 + 50 * i,
         duration: 400,
         distance: '10px',
         origin: 'bottom',

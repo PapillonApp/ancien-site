@@ -35,6 +35,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     overflow: hidden;
+    visibility: hidden;
 }
 
 #courseCardTop {
@@ -115,6 +116,7 @@ body {
     height: 36px;
     margin-bottom: 20px;
     opacity: 0.25;
+    visibility: hidden;
 }
 
 .bottom {
