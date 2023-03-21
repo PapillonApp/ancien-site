@@ -1,15 +1,11 @@
-/* import Asap font */
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;700&display=swap');
-
-/* import Miriam Libre font */
-@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&family=Miriam+Libre:wght@700&display=swap');
 
 html {
     scroll-behavior: smooth;
 }
 
 * {
-    font-family: 'Asap', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -65,7 +61,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #34495E;
     opacity: 0.5;
     font-size: 1rem;
     font-weight: 500;
@@ -89,11 +85,12 @@ nav ul li a.donation:hover {
 }
 
 nav button {
-    background: linear-gradient(0deg, #fff 0%, #fff 50%, #ffffff00 50%) no-repeat;
+    background: linear-gradient(0deg, #34495E 0%, #34495E 50%, #FBFAFA00 50%) no-repeat;
     background-size: 200% 200%;
     background-position: top;
 
-    border: 1px solid #ffffff;
+    color: #34495E;
+    border: 1px solid #34495E;
     padding: 8px 12px;
     padding-right: 14px;
     border-radius: 50px;
@@ -104,7 +101,6 @@ nav button {
     align-items: center;
     gap: 10px;
     outline: 0px solid #34495E55;
-    color: #fff;
 
     transition: background 0.2s ease, color 0.1s ease, outline 0.1s ease;
 }
@@ -115,7 +111,7 @@ nav a {
 }
 
 nav button:hover {
-    color: #000000;
+    color: #FBFAFA;
 
     background-position: bottom;
     outline: 3px solid #34495E55;
@@ -128,34 +124,7 @@ nav.header-scrolled {
     transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
-nav.header-scrolled ul li a {
-    color: #34495E;
-}
-
-nav.header-scrolled button {
-    background: linear-gradient(0deg, #34495E 0%, #34495E 50%, #FBFAFA00 50%) no-repeat;
-    background-size: 200% 200%;
-    background-position: top;
-    outline: 0px solid #34495E55;
-    border: 1px solid #34495E;
-    color: #34495E;
-}
-
-nav:not(.header-scrolled) .logo {
-    filter: invert(1) brightness(20);
-}
-
 /* header */
-#space {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -9999;
-    width: 100%;
-    height: 100vh;
-}
-
 #header {
     display: flex;
     align-items: flex-start;
@@ -173,10 +142,6 @@ nav:not(.header-scrolled) .logo {
     margin-top: 2%;
 }
 
-#header .title * {
-    text-shadow: 0px 0px 50px #000;
-}
-
 #header .title h1 {
     font-family: 'Miriam Libre';
     font-style: normal;
@@ -186,7 +151,7 @@ nav:not(.header-scrolled) .logo {
     /* or 50px */
     letter-spacing: -0.02em;
 
-    color: #ffffff;
+    color: #34495E;
 
     margin: 0 !important;
 }
@@ -198,7 +163,7 @@ nav:not(.header-scrolled) .logo {
 #header .title p {
     width: 428px;
 
-    
+    font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -207,7 +172,7 @@ nav:not(.header-scrolled) .logo {
 
     letter-spacing: -0.02em;
 
-    color: #ffffff;
+    color: #34495E;
     margin-top: 15px;
 }
 
@@ -222,16 +187,6 @@ nav:not(.header-scrolled) .logo {
 
 .store_badges .badge img {
     height: 44px !important;
-}
-
-.store_badges .badge img {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-radius: 8px;
-}
-
-.store_badges .badge img:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .landing_image {
@@ -281,7 +236,7 @@ nav:not(.header-scrolled) .logo {
 .titleInner p {
     width: 537px;
 
-    
+    font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -298,7 +253,7 @@ nav:not(.header-scrolled) .logo {
 
 #explore .explore_image {
     margin-top: 30px;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 
 #participate {
@@ -342,7 +297,7 @@ nav:not(.header-scrolled) .logo {
 }
 
 .security_arg h4 {
-    
+    font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
@@ -355,7 +310,7 @@ nav:not(.header-scrolled) .logo {
 }
 
 .security_arg p {
-    
+    font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -397,7 +352,7 @@ nav:not(.header-scrolled) .logo {
 #download p {
     width: 400px;
 
-    
+    font-family: 'Maven Pro';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -418,7 +373,6 @@ nav:not(.header-scrolled) .logo {
     position: absolute;
     right: calc(50% - var(--width) / 2);
     opacity: 50%;
-    margin-top: -20px;
 }
 
 /* responsive */
@@ -564,8 +518,4 @@ nav:not(.header-scrolled) .logo {
 
 article {
     margin-bottom: 10vh !important;
-}
-
-a {
-    color: inherit;
 }
