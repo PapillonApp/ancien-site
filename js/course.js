@@ -26,7 +26,7 @@ else {
             memo: data[8] == 'none' ? null : data[8]
         };
 
-        const modifiableAttributes = ['firstName', 'subject', 'teacher', 'room']
+        const modifiableAttributes = ['firstName', 'subject', 'teacher', 'room', 'status']
         for (const key in course) {
             if(modifiableAttributes.includes(key)) {
                 course[key] = course[key].split('-').map(Number).map(x => String.fromCharCode(x)).join('');
