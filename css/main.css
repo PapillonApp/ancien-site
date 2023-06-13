@@ -86,6 +86,10 @@ ul.nav_links a:hover {
     right: 0;
 }
 
+.nav_links_left {
+    display: none;
+}
+
 /* Hero */
 
 #header_info {
