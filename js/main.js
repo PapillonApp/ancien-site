@@ -8,6 +8,10 @@ const download_links = {
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
+    if (/huawei/i.test(userAgent)) {
+        return "Huawei";
+    }
+
     if (/android/i.test(userAgent)) {
         return "Android";
     }
@@ -34,6 +38,10 @@ if (os == "iOS" || os == "macOS") {
 else if (os == "Android") {
     document.getElementById("download_link").href = download_links.googleplay;
     document.getElementById("service").innerText = "depuis Google Play";
+}
+else if (os == "Huawei") {
+    document.getElementById("download_link").href = download_links.github;
+    document.getElementById("service").innerText = "Télécharger l'APK";
 }
 else {
     document.getElementById("download_link").href = download_links.github;
