@@ -74,7 +74,7 @@ function titleReveal(delay) {
 
 ScrollReveal().reveal('.title', titleReveal(0));
 ScrollReveal().reveal('.description', titleReveal(100));
-ScrollReveal().reveal('#download_link', titleReveal(200));
+ScrollReveal().reveal('#download_options', titleReveal(200));
 
 // inner list
 // repeat 3x the content of .ENT_inner_list
