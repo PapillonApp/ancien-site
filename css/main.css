@@ -87,7 +87,7 @@ ul.nav_links a:hover {
 }
 
 .nav_links_left {
-    display: none;
+    display: none !important;
 }
 
 /* Hero */
