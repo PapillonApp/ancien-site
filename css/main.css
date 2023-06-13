@@ -59,7 +59,7 @@ header, .section {
 .main_nav {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 28px 0;
     position: relative;
 }
 
