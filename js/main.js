@@ -1,42 +1,71 @@
-// title
-function title_options(delay) {
-    return {
-        origin: 'bottom',
-        distance: '50px',
-        duration: 700,
-        delay: delay,
-    }
-};
-
-ScrollReveal().reveal('#main_title', title_options(150));
-ScrollReveal().reveal('#main_desc', title_options(250));
-ScrollReveal().reveal('#main_buttons', title_options(300));
-ScrollReveal().reveal('#main_conditions', title_options(350));
-
-// navbar
-ScrollReveal().reveal('#notification_inner', {
-    origin: 'top',
-    distance: '50px',
-    duration: 700,
-    delay: 100,
-});
-
-ScrollReveal().reveal('.feature_name', title_options(100));
-ScrollReveal().reveal('.feature_desc', title_options(200));
-ScrollReveal().reveal('.feature_img', title_options(300));
-
-// sections
-ScrollReveal().reveal('.section_title', title_options(100));
-ScrollReveal().reveal('.section_description', title_options(200));
-
-// privacy
-ScrollReveal().reveal('.pc1', title_options(0));
-ScrollReveal().reveal('.pc2', title_options(50));
-ScrollReveal().reveal('.pc3', title_options(100));
-
-// contribs
-let contribs = document.getElementsByClassName('contrib');
-for (let i = 0; i < contribs.length; i++) {
-    ScrollReveal().reveal(contribs[i], title_options(10 * i));
+// get store link
+const download_links = {
+    googleplay: "https://play.google.com/store/apps/details?id=plus.pronote.app",
+    appstore: "https://apps.apple.com/fr/app/papillon-votre-vie-scolaire/id1662669707"
 }
-ScrollReveal().reveal('.swnbg', title_options(400));
+
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    // macOS detection
+    if (navigator.platform.toUpperCase().indexOf('MAC')>=0) {
+        return "macOS";
+    }
+
+    return "unknown";
+}
+
+var os = getMobileOperatingSystem();
+
+if (os == "iOS" || os == "macOS") {
+    document.getElementById("download_link").href = download_links.appstore;
+    document.getElementById("service").innerText = "depuis l'App Store";
+}
+else {
+    document.getElementById("download_link").href = download_links.googleplay;
+    document.getElementById("service").innerText = "depuis Google Play";
+}
+
+// get latest version
+fetch("https://api.github.com/repos/PapillonApp/Papillon/releases/latest")
+    .then(response => response.json())
+    .then(data => {
+        let version = data.tag_name;
+        document.getElementById("version").innerText = "v" + version;
+    });
+
+// parallax
+var scene = document.getElementById('header_image');
+var parallaxInstance = new Parallax(scene);
+
+// scrollreveal
+function titleReveal(delay) {
+    return { 
+        distance: '20px',
+        origin: 'bottom',
+        opacity: 0,
+        duration: 500,
+        scale: 0.9,
+        delay: delay
+    }
+}
+
+ScrollReveal().reveal('.title', titleReveal(0));
+ScrollReveal().reveal('.description', titleReveal(100));
+ScrollReveal().reveal('#download_link', titleReveal(200));
+
+// inner list
+// repeat 3x the content of .ENT_inner_list
+var inner_list = document.getElementsByClassName("ENT_inner_list");
+for (var i = 0; i < inner_list.length; i++) {
+    inner_list[i].innerHTML = inner_list[i].innerHTML.repeat(4);
+}
