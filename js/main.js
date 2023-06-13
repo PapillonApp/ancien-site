@@ -82,3 +82,16 @@ var inner_list = document.getElementsByClassName("ENT_inner_list");
 for (var i = 0; i < inner_list.length; i++) {
     inner_list[i].innerHTML = inner_list[i].innerHTML.repeat(4);
 }
+
+// dropdown 
+function showDropdown() {
+    document.getElementById("more_dropdown_content").classList.toggle("show");
+}
+
+// if click outside dropdown, close it
+window.onclick = function(event) {
+    // check if target is in #more_dropdown_content or #more_dropdown or in an element inside #more_dropdown_content
+    if (!event.target.matches('#more_dropdown_content') && !event.target.matches('#more_dropdown') && !event.target.closest('#more_dropdown_content') && !event.target.closest('#more_dropdown')) {
+        document.getElementById("more_dropdown_content").classList.remove("show");
+    }
+}

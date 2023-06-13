@@ -53,16 +53,44 @@
                 <h1 class="title">Enfin une app simple <br/>pour votre vie scolaire</h1>
                 <p class="description">Votre emploi du temps, votre agenda, vos notes, vos news et bien plus encore en un clin d’œil grâce à la nouvelle app Papillon.</p>
                 
-                <a href="#" id="download_link">
-                    <div class="download_button">
-                        <span class="material-symbols-outlined">save_alt</span>
-                        <div class="download_button_text">
-                            <h3>Télécharger Papillon</h3>
-                            <p id="service"></p>
+                <div id="download_options">
+                    <a href="#" id="download_link">
+                        <div class="download_button">
+                            <span class="material-symbols-outlined">save_alt</span>
+                            <div class="download_button_text">
+                                <h3>Télécharger Papillon</h3>
+                                <p id="service"></p>
+                            </div>
+                            <p id="version"></p>
                         </div>
-                        <p id="version"></p>
+                    </a>
+                    <a id="more_dropdown" onclick="showDropdown()">
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </a>
+                    <div id="more_dropdown_content">
+                        <a href="https://github.com/PapillonApp/Papillon/releases/latest" class="more_dropdown_option">
+                            <img class="option_service" src="assets/github.png" alt="Logo d'un service">
+                            <div class="option_text">
+                                <h3>GitHub</h3>
+                                <p>Voir sur GitHub</p>
+                            </div>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=plus.pronote.app" class="more_dropdown_option">
+                            <img class="option_service" src="assets/play.png" alt="Logo d'un service">
+                            <div class="option_text">
+                                <h3>Google Play Store</h3>
+                                <p>Voir sur Google Play</p>
+                            </div>
+                        </a>
+                        <a href="https://apps.apple.com/fr/app/papillon-votre-vie-scolaire/id1662669707" class="more_dropdown_option">
+                            <img class="option_service" src="assets/appstore.png" alt="Logo d'un service">
+                            <div class="option_text">
+                                <h3>App Store</h3>
+                                <p>Voir sur l'App Store</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
 
             <div id="header_image">
