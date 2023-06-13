@@ -20,7 +20,7 @@ header {
     background-color: #29947A;
     background-image: url('/assets/noise.png'), url('/assets/header/image1.png');
 
-    animation: header-image 5s infinite linear;
+    animation: header-image 10s infinite linear;
     background-size: cover;
     background-position: center;
 
