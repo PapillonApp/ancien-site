@@ -1,7 +1,8 @@
 // get store link
 const download_links = {
     googleplay: "https://play.google.com/store/apps/details?id=plus.pronote.app",
-    appstore: "https://apps.apple.com/fr/app/papillon-votre-vie-scolaire/id1662669707"
+    appstore: "https://apps.apple.com/fr/app/papillon-votre-vie-scolaire/id1662669707",
+    github: "https://github.com/PapillonApp/Papillon/releases/latest"
 }
 
 function getMobileOperatingSystem() {
@@ -30,9 +31,13 @@ if (os == "iOS" || os == "macOS") {
     document.getElementById("download_link").href = download_links.appstore;
     document.getElementById("service").innerText = "depuis l'App Store";
 }
-else {
+else if (os == "Android") {
     document.getElementById("download_link").href = download_links.googleplay;
     document.getElementById("service").innerText = "depuis Google Play";
+}
+else {
+    document.getElementById("download_link").href = download_links.github;
+    document.getElementById("service").innerText = "depuis GitHub";
 }
 
 // get latest version
