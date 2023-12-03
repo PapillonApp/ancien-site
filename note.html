@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>Ma magnifique note - Papillon</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:locale" content="fr_FR" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" id="ogTitle" content="Note envoyé avec Papillon" />
+		<meta property="og:description" id="ogDescription" content="Quelqu'un vous a envoyé une note avec Papillon." />
+		<meta property="og:url" content="https://www.getpapillon.xyz" />
+		<meta property="og:site_name" content="Papillon" />
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<style>
+			/* FONT */
+			* {font-family: 'Fixel', sans-serif;}
+			/* BODY */
+			body {background-color: #F2F2F7;display: flex;align-items: center;justify-content: center;min-height: 100vh;}
+			.logo_bg {position: fixed;height: 110vh;bottom: -25vh;right: -15vh;z-index: -1;opacity: .2;}
+			/* CARD STYLE */
+			body > div {width: 100vw;max-width: 500px;background-color: #FFF;border-radius: 20px;box-shadow: 0 0 50px #00000010;overflow: hidden;}
+			body > div > .header {background-color: #32AB8E;padding: 20px;color: #FFF;}
+			body > div > .body {padding: 20px;height: calc(100% - 40px);width: calc(100% - 40px);}
+			/* TEXT STYLE */
+			h1 {margin: 0;font-size: 22pt;font-weight: 600;}
+			h2 {margin: 0;font-size: 12pt;font-weight: 400;opacity: .6;}
+			h3 {margin: 0;font-size: 54pt;}
+			p {margin: 0;font-size: 17pt;font-weight: 600;}
+			a {color: #000;}
+			.student_note > p {font-size: 10pt;}
+			/* STUDENT NOTE STYLE */
+			.student_note {height: 150px;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+			hr {background-color: #000;opacity: .6;}
+			/* CATEGORY NAME STYLE */
+			span {font-size: 12pt;opacity: .6;font-weight: 400;}
+			p > br {margin-top: 10px;}
+			/* FOOT NOTE STYLE */
+			.bottom {margin-top: 30px;opacity: .3;text-align: center;}
+			.bottom > img {width: 32px;margin-top: 20px;}
+			.bottom > p {font-size: 10pt;opacity: .5;}
+			/* OTHER STYLE */
+			#un, #unf {opacity: 1;}
+			#unf {font-size: 10pt;font-weight: 600;}
+			/* RESPONSIVE */
+			@media only screen and (max-width: 768px) {body > div {max-width: none;height: 100vh;border-radius: 0;background-color: #FFFFFFAF;}.body {overflow: scroll;}}
+		</style>
+	</head>
+	<body>
+		<img src="/assets/logo_light.svg" class="logo_bg" alt="Logo de papillon en fond">
+		<div id="card">
+			<div class="header" id="hc">
+				<h2><span id="un">{username}</span> aimerait vous partager une de ses notes</h2>
+				<h1 id="su">{subject}</h1>
+			</div>
+			<div class="body">
+				<p><span>Note de l'élève :</span></p>
+				<div class="student_note">
+					<h3 id="sn">00/20</h3>
+					<p id="sc">(Une franche réussite)</p>
+				</div>
+				<hr>
+				<p id="co"><span>Coefficient :</span><br>x0.00</p>
+				<p id="sv"><span>Remis sur 20 :</span><br>00/20</p>
+				<p id="mc"><span>Moyenne de classe :</span><br>00/20</p>
+				<p id="mi"><span>Note minimale :</span><br>00/20</p>
+				<p id="ma"><span>Note maximale :</span><br>00/20</p>
+				<div class="bottom">
+					<p>Mais malgré tout, on sait que c'est avec notre fameuse application <a href="/">Papillon</a> que <span id="unf">{username}</span> à réussi. <a href="/">Et pourquoi pas vous ?</a></p>
+					<img src="/assets/logo_light.svg" alt="Logo de Papillon">
+				</div>
+			</div>
+		</div>
+		<!-- 
+			
+		 _                     _ _                        _    
+		| |__   _____      __ (_| |_  __      _____  _ __| | __
+		| '_ \ / _ \ \ /\ / / | | __| \ \ /\ / / _ \| '__| |/ /
+		| | | | (_) \ V  V /  | | |_   \ V  V | (_) | |  |   < 
+		|_| |_|\___/ \_/\_/   |_|\__|   \_/\_/ \___/|_|  |_|\_\
+		
+		
+		The page receive data by url, notably by the "d"(data) parameter. "d" is a JSON string encoded in base64 (for security reason).
+		Exemple of "d" param :
+		eyJoZWFkZXIiOnsidXNlcm5hbWUiOiJSw6lteSIsInN1YmplY3QiOiJIaXN0b2lyZSBHw6lvIiwiY29sb3IiOiIjNjM4Mjc0In0sICJkYXRhIjp7Im5vdGUiOiIxOC8yMCIsImNvbW1lbnRhcnkiOiJVbmUgZnJhbmNoZSByw6l1c3NpdGUiLCAiY29lZiI6ICJ4MS4wMCIsICJub3RlMjAiOiAiMTgvMjAiLCAiY2xhc3MiOiAiMTEsNDgvMjAiLCAibWluIjogIjAyLzIwIiwgIm1heCI6ICIxOS8yMCJ9fQ==
+		Corresponding to :
+		{"header":{"username":"Rémy","subject":"Histoire Géo","color":"#638274"}, "data":{"note":"18/20","commentary":"Une franche réussite", "coef": "x1.00", "note20": "18/20", "class": "11,48/20", "min": "02/20", "max": "19/20"}}
+		
+		The script at bottom, replace the data in the webpage
+		-->
+		<script>const p = s => document.getElementById(s);const d = JSON.parse(decodeURIComponent(escape(atob(new URLSearchParams(window.location.search).get('d')))));p('hc').style.background = d.header.color;p('un').innerHTML = d.header.username;p('su').innerHTML = d.header.subject;p('sn').innerHTML = d.data.note;p('sc').innerHTML = `(${d.data.commentary})`;p('co').innerHTML = p('co').innerHTML.replace('x0.00', d.data.coef);p('sv').innerHTML = p('sv').innerHTML.replace('00/20', d.data.note20);p('mc').innerHTML = p('mc').innerHTML.replace('00/20', d.data.class);p('mi').innerHTML = p('mi').innerHTML.replace('00/20', d.data.min);p('ma').innerHTML = p('ma').innerHTML.replace('00/20', d.data.max);p('unf').innerHTML = d.header.username;</script>
+	</body>
+</html>
