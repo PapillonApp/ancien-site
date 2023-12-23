@@ -71,23 +71,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- 
-			
-		 _                     _ _                        _    
-		| |__   _____      __ (_| |_  __      _____  _ __| | __
-		| '_ \ / _ \ \ /\ / / | | __| \ \ /\ / / _ \| '__| |/ /
-		| | | | (_) \ V  V /  | | |_   \ V  V | (_) | |  |   < 
-		|_| |_|\___/ \_/\_/   |_|\__|   \_/\_/ \___/|_|  |_|\_\
-		
-		
-		The page receive data by url, notably by the "d"(data) parameter. "d" is a JSON string encoded in base64 (for security reason).
-		Exemple of "d" param :
-		eyJoZWFkZXIiOnsidXNlcm5hbWUiOiJSw6lteSIsInN1YmplY3QiOiJIaXN0b2lyZSBHw6lvIiwiY29sb3IiOiIjNjM4Mjc0In0sICJkYXRhIjp7Im5vdGUiOiIxOC8yMCIsImNvbW1lbnRhcnkiOiJVbmUgZnJhbmNoZSByw6l1c3NpdGUiLCAiY29lZiI6ICJ4MS4wMCIsICJub3RlMjAiOiAiMTgvMjAiLCAiY2xhc3MiOiAiMTEsNDgvMjAiLCAibWluIjogIjAyLzIwIiwgIm1heCI6ICIxOS8yMCJ9fQ==
-		Corresponding to :
-		{"header":{"username":"Rémy","subject":"Histoire Géo","color":"#638274"}, "data":{"note":"18/20","commentary":"Une franche réussite", "coef": "x1.00", "note20": "18/20", "class": "11,48/20", "min": "02/20", "max": "19/20"}}
-		
-		The script at bottom, replace the data in the webpage
-		-->
 		<script>function r(t){return new DOMParser().parseFromString(t,"text/html").body.textContent||""}const p = s => document.getElementById(s);const d = JSON.parse(decodeURIComponent(escape(atob(new URLSearchParams(window.location.search).get('d')))));p('hc').style.background = d.header.color;p('un').innerText = d.header.username;p('su').innerText = d.header.subject;p('sn').innerText = d.data.note;p('sc').innerText = `(${d.data.commentary})`;p('co').innerHTML = p('co').innerHTML.replace('x0.00', r(d.data.coef));p('sv').innerHTML = p('sv').innerHTML.replace('00/20', r(d.data.note20));p('mc').innerHTML = p('mc').innerHTML.replace('00/20', r(d.data.class));p('mi').innerHTML = p('mi').innerHTML.replace('00/20', r(d.data.min));p('ma').innerHTML = p('ma').innerHTML.replace('00/20', r(d.data.max));p('unf').innerText = d.header.username;</script>
 	</body>
 </html>
