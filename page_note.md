@@ -1,6 +1,6 @@
 # 📝 Page note
 ## 🧪 Tester la page
-[Ouvrir la page avec des données fictive](https://getpapillon.xyz/note?d=eyJoZWFkZXIiOnsidXNlcm5hbWUiOiJSw6lteSIsInN1YmplY3QiOiJIaXN0b2lyZSBHw6lvIiwiY29sb3IiOiIjNjM4Mjc0In0sICJkYXRhIjp7Im5vdGUiOiIxOC8yMCIsImNvbW1lbnRhcnkiOiJVbmUgZnJhbmNoZSByw6l1c3NpdGUiLCAiY29lZiI6ICJ4MS4wMCIsICJub3RlMjAiOiAiMTgvMjAiLCAiY2xhc3MiOiAiMTEsNDgvMjAiLCAibWluIjogIjAyLzIwIiwgIm1heCI6ICIxOS8yMCJ9fQ==)
+[Ouvrir la page avec des données fictive](https://getpapillon.xyz/note?d=eyJoZWFkZXIiOnsidXNlcm5hbWUiOiJGYW5ueSIsInN1YmplY3QiOiJBbmdsYWlzIExWMSIsImNvbG9yIjoiI0YzOUMxMiJ9LCJkYXRhIjp7Im5vdGUiOiIxNC4wMC8yMCIsImNvbW1lbnRhcnkiOiJVbmUgZnJhbmNoZSBy6XVzc2l0ZSIsImNvZWZmIjoieDEuMDAiLCJub3RlMjAiOiIxNC4wMC8yMCIsImNsYXNzIjoiOS45NC8yMCIsIm1pbiI6IjMuMDAvMjAiLCJtYXgiOiIxNS4wMC8yMCJ9fQ==)
 ## 🔧 Comment ça marche
 L'URL doit contenir le paramètre "d" (data), qui à comme valeur une chaîne en base64.\
 **Exemple :** \
