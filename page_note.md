@@ -26,3 +26,5 @@ L'URL doit contenir le paramètre "d" (data), qui à comme valeur une chaîne en
 ```
 
 Le javascript en bas de la page note.html, se charge d'afficher les valeurs du paramètre "d" sur la page.
+
+Si le paramètre "d" n'est pas présent, ou que les paramètres sont invalides, elle renverra vers un easter egg.
